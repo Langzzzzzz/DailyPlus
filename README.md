@@ -1,7 +1,7 @@
 # 3004_2020winter
 #Course: COMP 3004B</br>
 Instructor: Prof. Olga Baysal</br>
-Team Name: Just Fives</br>
+Team Name: Just Five</br>
 Team Member:</br>
       Zhenqing Lang    	 101087276</br>
       Jie      Ren 	     101087545</br>
