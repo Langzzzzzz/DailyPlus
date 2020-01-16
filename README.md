@@ -1,5 +1,6 @@
 # 3004_2020winter 
 ![alt text](team_logo.png)
+
 #Course: COMP 3004B</br>
 Instructor: Prof. Olga Baysal</br>
 Team Name: Just Five</br>
