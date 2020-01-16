@@ -1,8 +1,8 @@
 # 3004_2020winter 
 ![alt text](team_logo.PNG)
 ### Course: COMP 3004B</br>
-Instructor: Prof. Olga Baysal</br>
-Team Name: Just Five</br>
+	Instructor: Prof. Olga Baysal
+	Team Name: Just Five
 ### Team Member:
       Zhenqing Lang  101087276
       Jie      Ren 	 101087545
@@ -11,5 +11,5 @@ Team Name: Just Five</br>
 
 ### Meeting Information:
 	Location: HP4115
-	Period 	: Monday 3:00PM – 8:00PM
+	Period 	: Monday  3:00PM – 8:00PM
 		  Tuesday 3:00PM - 8:00PM
