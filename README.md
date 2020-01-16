@@ -12,3 +12,4 @@ Team Name: Just Five</br>
 ### Meeting Information:
 	Location: HP4115
 	Period 	: Monday 3:00PM – 8:00PM
+		  Tuesday 3:00PM - 8:00PM
