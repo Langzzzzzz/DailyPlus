@@ -1,6 +1,6 @@
 # 3004_2020winter 
 ![alt text](team_logo.PNG)
-# Course: COMP 3004B</br>
+### Course: COMP 3004B</br>
 Instructor: Prof. Olga Baysal</br>
 Team Name: Just Five</br>
 Team Member:</br>
@@ -9,6 +9,6 @@ Team Member:</br>
       Haiyang  Ni	 	 101067092</br>
       Payton   Pei	  	 101065299</br>
 </br>
-Meeting Information:</br>
+### Meeting Information:</br>
 	Location: HP4115</br>
 	Period 	: Monday 3:00PM – 8:00PM</br>
