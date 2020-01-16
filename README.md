@@ -23,4 +23,11 @@
 	5. user login
 	5. UI design
 	6. 图表展示账单
-	7. ....
+	1.What are the functional properties of your system？
+	1.1 Generate bills to PDF. 
+	1.2 Executing password.
+	1.3 Record the daylily bill.
+	1.4 Pie graph.
+	1.5 user feedback.
+	housewife and student will use our app to record those daylily bills. 1.1 and 1.4, our function and data that can help them to save and analysis they daily expenses. These processes can help housewife or student to manage them account.  
+
