@@ -32,7 +32,7 @@
 
 
 housewife and student will use our app to record those daily bills. 
-1.1 and 1.4, our function and data that can help them to save and analysis they daily expenses. 
+for 1.1 and 1.4, our function and data that can help them to save and analysis they daily expenses. 
 These processes can help housewife or student to manage them account. simply and flat interface, 
 users can create theypersonal tag to record the bill.
 Uses can set a password to protect their personal security information. 
