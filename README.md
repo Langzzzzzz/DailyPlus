@@ -39,12 +39,15 @@ A description of the non-functional properties your system needs to support. The
 least two of these. Justify why these properties are important for your system.
 A： 1.UI  
 	
+	
               If the practical function does not have a good-looking UI, it will also gain a large number of user groups. The first focus of most users when finding a piece of software is the UI. Good-looking UI will only explore its features, if not, just uninstall it.
 
 2. users can create they personal tag to record the bill. 
 3. Uses can set a password to protect their personal security information.
+
            We all know that ledgers are privatized items. Therefore, setting a separate password for our mobile app can give users a sense of security.
-4. User-entered money can be converted from Canadian dollars to other currencies
+4. User-entered money can be converted from Canadian dollars to other currencies.
+
                Most of mobile apps are for the whole world, so the conversion between currencies is very necessary for users.
 
 	1.What are the functional properties of your system？
