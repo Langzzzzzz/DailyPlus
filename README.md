@@ -23,6 +23,16 @@
 	5. user login
 	5. UI design
 	6. 图表展示账单
+	
+What is your project?
+A: Our project is an accounting mobile app.
+
+Why is it interesting?
+A: 
+
+Describe and justify your project selection. Why does this project make sense in a mobile form factor?
+A: People use their phones every day and usually use their phones to pay, so our group want to create an account mobile app. This is the portability of using a mobile phone. Thus, people do not need to record the daily bill on their computer every day. Because  often mobile phone are people’s first choice. 
+
 	1.What are the functional properties of your system？
 	1.1 Generate bills to PDF. 
 	1.2 Executing password.
