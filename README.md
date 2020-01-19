@@ -28,7 +28,7 @@ What is your project?
 A: Our project is an accounting mobile app.
 
 Why is it interesting?
-A: People can record their own life data anytime, anywhere, and they can check their past records at any time.
+A: People can record their own life data anytime and anywhere, also they can check their past records at any time.
 
 Describe and justify your project selection. Why does this project make sense in a mobile form factor?
 A: People use their phones every day and usually use their phones to pay, so our group want to create an account mobile app. This is the portability of using a mobile phone. Thus, people do not need to record the daily bill on their computer every day. Because  often mobile phone are people’s first choice. 
