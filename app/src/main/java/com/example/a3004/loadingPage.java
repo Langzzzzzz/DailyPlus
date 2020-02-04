@@ -8,7 +8,7 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class loadingPage extends AppCompatActivity {
-    public static int SLASH = 500000;//waiting time
+    public static int SLASH = 3000;//waiting time
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
