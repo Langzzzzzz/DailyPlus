@@ -67,3 +67,6 @@
 ### Loading Pic =>
 ![loading](loading.png)
 
+### Sliding menu pic =>
+![slidingmenu](slidingmenu.JPG)
+
