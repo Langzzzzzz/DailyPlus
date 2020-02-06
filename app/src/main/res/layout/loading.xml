@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/loading"
+    android:label="@string/app_name"
     android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
     tools:context=".loadingPage">
 
