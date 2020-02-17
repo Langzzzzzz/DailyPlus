@@ -14,7 +14,8 @@
 	Period 	: Monday  3:00PM – 8:00PM
 		  Tuesday 3:00PM - 8:00PM
 
-	
+### Testing Machine:
+	  This application is tested based on Google Pixel 3a	
 ### What is your project?
 	A: Our project is an accounting mobile app.
 
