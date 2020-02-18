@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">3004</string>
+    <string name="app_name">daily+</string>
+    <string name="record">No record found</string>
+    <string name= "sample_year">Feb 12, 2020</string>>
 </resources>
