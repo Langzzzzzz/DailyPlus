@@ -13,8 +13,11 @@ public class mainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
         Button vb =findViewById(R.id.addButton);
         vb.setOnClickListener(v->
-                vb.setText("D"));
+
+        {
             //pop up a window AND do something
+            //do something here
+        });
 
     }
 }
