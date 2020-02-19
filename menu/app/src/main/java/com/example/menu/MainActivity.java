@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openCalculatorActivity();
+                Calculator calculator = new Calculator();
+                calculator.show(getSupportFragmentManager(), "Calculator bottom sheet");
+                //openCalculatorActivity();
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
