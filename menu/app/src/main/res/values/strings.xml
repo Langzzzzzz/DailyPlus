@@ -25,7 +25,8 @@
 
     <string name="loading">loadingPage</string>
     <string name="add_expense">add new expense</string>
-    <string name="cancel">cancel</string>
+    <string name="cancel">Cancel</string>
     <string name="add">add</string>
+    <string name="mainPage">main</string>
 </resources>
 
