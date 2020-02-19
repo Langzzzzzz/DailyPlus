@@ -17,11 +17,7 @@
                 android:icon="@drawable/bill"
                 android:title="@string/menu_bill"/>
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
-        <item
-            android:id="@+id/nav_generate"
+            android:id="@+id/nav_chart"
             android:icon="@drawable/generate"
             android:title="@string/menu_generate" />
     </group>
