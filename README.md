@@ -62,4 +62,5 @@
 ### Sliding menu pic =>
 ![slidingmenu](slidingmenu.JPG)
 
-
+### What app looks like in our phone
+![screencapture](appScreencapture.png)
