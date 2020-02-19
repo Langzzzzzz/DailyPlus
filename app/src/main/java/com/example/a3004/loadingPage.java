@@ -29,7 +29,6 @@ public class loadingPage extends AppCompatActivity {
         if (first_run){
             sharedPreferences.edit().putBoolean("First",false).apply();
             //first run => launch tutorial
-
         }
         //else start app as usuals
 
