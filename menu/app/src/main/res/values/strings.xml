@@ -1,6 +1,7 @@
 <resources>
     <string name="menu_chart">Generate Chart</string>
-
+    <string name="name">Daily +</string>
+    <string name="email">gmail@mail.com</string>
     <string name="app_name">Daily+</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
