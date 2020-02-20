@@ -28,5 +28,8 @@
     <string name="cancel">Cancel</string>
     <string name="add">add</string>
     <string name="mainPage">main</string>
+    <string name="facebook_app_id">2547926432157526</string>
+    <string name="fb_login_protocol_scheme">fb2547926432157526</string>
+    <string name="login">Login</string>
 </resources>
 
