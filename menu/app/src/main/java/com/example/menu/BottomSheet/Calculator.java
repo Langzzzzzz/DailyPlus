@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import com.example.menu.R;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class Calculator extends BottomSheetDialogFragment implements IBottomSheetCalculatorListener {
+
 
     private Button mButton1;
     private Button mButton2;
@@ -37,6 +39,8 @@ public class Calculator extends BottomSheetDialogFragment implements IBottomShee
     private EditText dateText;
 
     private boolean isZero = true;
+
+
 
     @Nullable
     @Override
@@ -319,4 +323,6 @@ public class Calculator extends BottomSheetDialogFragment implements IBottomShee
 //                    throw new IllegalStateException("Unexpected value: " + v.getId());
 //            }
 //        }
+
+
 
