@@ -40,20 +40,18 @@ public class MainActivity extends AppCompatActivity {
 
         });*/
 
-
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calculator calculator = new Calculator();
+                calculator.show(getSupportFragmentManager(), "Calculator bottom sheet");
+                //openCalculatorActivity();
+            }
+        });
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Calculator calculator = new Calculator();
-//                calculator.show(getSupportFragmentManager(), "Calculator bottom sheet");
-//                //openCalculatorActivity();
-//            }
-//        });
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
