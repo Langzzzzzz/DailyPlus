@@ -16,6 +16,12 @@
                 android:id="@+id/nav_bill"
                 android:icon="@drawable/bill"
                 android:title="@string/menu_bill"/>
+
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/categories"
+            android:title="@string/menu_categories"/>
+
         <item
             android:id="@+id/nav_chart"
             android:icon="@drawable/generate"
