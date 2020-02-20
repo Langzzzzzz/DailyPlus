@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +14,23 @@ import com.example.menu.R;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class Calculator extends BottomSheetDialogFragment {
+
+    private Button mButton1;
+    private Button mButton2;
+    private Button mButton3;
+    private Button mButton4;
+    private Button mButton5;
+    private Button mButton6;
+    private Button mButton7;
+    private Button mButton8;
+    private Button mButton9;
+    private Button mButton0;
+    private Button mButtonDot;
+    private Button mButtonMin;
+    private Button mButtonAdd;
+    private Button mButtonDel;
+    private Button mButtonEnt;
+
 //    @Override
 ////    protected void onCreate(Bundle savedInstanceState) {
 ////        super.onCreate(savedInstanceState);
