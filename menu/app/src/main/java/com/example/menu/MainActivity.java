@@ -1,5 +1,6 @@
 package com.example.menu;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -17,16 +18,30 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
+import android.widget.Button;
 
 //test fetch
 
 public class MainActivity extends AppCompatActivity {
 
+    //private Button button;
     private AppBarConfiguration mAppBarConfiguration;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+       /* button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                opencategorypage();
+            }
+
+        });*/
+
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -43,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_bill, R.id.nav_slideshow,
+                R.id.nav_home, R.id.nav_bill, R.id.nav_slideshow,R.id.nav_categories,
+                R.id.nav_language,
                 R.id.nav_tools, R.id.nav_share, R.id.nav_send)
                 .setDrawerLayout(drawer)
                 .build();
@@ -70,4 +86,11 @@ public class MainActivity extends AppCompatActivity {
         Intent calculatorIntet = new Intent(this, com.example.menu.BottomSheet.Calculator.class);
         startActivity(calculatorIntet);
     }
+
+   /* public void opencategorypage(){
+        Intent intent = new Intent(this, Category_Activity.class);
+        startActivity(intent);
+
+    }*/
+
 }

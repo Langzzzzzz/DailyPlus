@@ -12,6 +12,7 @@ public class CategoriesViewModel extends ViewModel {
         mText =new MutableLiveData<>();
         mText.setValue("This is generate categories page");
     }
+
     public LiveData<String> getText() {
         return mText;
     }
