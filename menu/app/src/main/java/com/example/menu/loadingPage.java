@@ -27,7 +27,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import static android.widget.Toast.LENGTH_LONG;
 
-public class loadingPage extends AppCompatActivity {
+public class  loadingPage extends AppCompatActivity {
     public static int SLASH = 3000;//waiting time
     private CallbackManager mCallbackManager;
     private FirebaseApp mAuth = FirebaseApp.getInstance();
@@ -62,16 +62,17 @@ public class loadingPage extends AppCompatActivity {
                 // ...
             }
         });
+
 // ...
 
-//        Button login = findViewById(R.id.log);
-//        login.setOnClickListener(v->
-//        {
-//            Intent nextScreen = new Intent(loadingPage.this, MainActivity.class);
-//            startActivity(nextScreen);
-//            finish();
-//
-//        });
+        Button login = findViewById(R.id.jumpButton);
+        login.setOnClickListener(v->
+        {
+            Intent nextScreen = new Intent(loadingPage.this, MainActivity.class);
+            startActivity(nextScreen);
+            finish();
+
+        });
 
 //        firstLaunch();
 //        new Handler().postDelayed(() -> {
