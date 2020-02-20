@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.menu.R;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
-public class Calculator extends BottomSheetDialogFragment {
+public class Calculator extends BottomSheetDialogFragment implements IBottomSheetCalculatorListener {
 
     private Button mButton1;
     private Button mButton2;
@@ -31,17 +31,117 @@ public class Calculator extends BottomSheetDialogFragment {
     private Button mButtonDel;
     private Button mButtonEnt;
 
-//    @Override
-////    protected void onCreate(Bundle savedInstanceState) {
-////        super.onCreate(savedInstanceState);
-////        setContentView(R.layout.bottom_sheet_calculator);
-////    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
             View v = inflater.inflate(R.layout.bottom_sheet_calculator, container,false);
+
+            mButton1 = v.findViewById(R.id.button1);
+            mButton2 = v.findViewById(R.id.button2);
+            mButton3 = v.findViewById(R.id.button3);
+            mButton4 = v.findViewById(R.id.button4);
+            mButton5 = v.findViewById(R.id.button5);
+            mButton6 = v.findViewById(R.id.button6);
+            mButton7 = v.findViewById(R.id.button7);
+            mButton8 = v.findViewById(R.id.button8);
+            mButton9 = v.findViewById(R.id.button9);
+            mButton0 = v.findViewById(R.id.button0);
+            mButtonDot = v.findViewById(R.id.button_dot);
+            mButtonMin = v.findViewById(R.id.button_min);
+            mButtonAdd = v.findViewById(R.id.button_add);
+            mButtonDel = v.findViewById(R.id.button_del);
+            mButtonEnt = v.findViewById(R.id.button_ent);
+
+
             return v;
     }
+
+    @Override
+    public void onButtonClicked(String text) {
+
+    }
 }
+
+ //   public void onClick(View v){
+//            switch (v.getId()) {
+//                case  R.id.button1: {
+//                    // do something for button a click
+//
+//                    break;
+//                }
+//
+//                case R.id.button2: {
+//                    // do something for button b click
+//
+//                    break;
+//                }
+//                case  R.id.button3: {
+//                    // do something for button c click
+//
+//                    break;
+//                }
+//
+//                case R.id.button4: {
+//                    // do something for button d click
+//                    break;
+//                }
+//
+//                case  R.id.button5: {
+//                    // do something for button e click
+//
+//                    break;
+//                }
+//
+//                case R.id.button6: {
+//                    // do something for button prev click
+//                    break;
+//                }
+//
+//                case  R.id.button7: {
+//                    // do something for button submit click
+//                    break;
+//                }
+//
+//                case R.id.button8: {
+//                    // do something for button next click
+//                    break;
+//                }
+//                case R.id.button9: {
+//                    // do something for button prev click
+//                    break;
+//                }
+//
+//                case  R.id.button0: {
+//                    // do something for button submit click
+//                    break;
+//                }
+//
+//                case R.id.button_add: {
+//                    // do something for button next click
+//                    break;
+//                }
+//                case R.id.button_min: {
+//                    // do something for button next click
+//                    break;
+//                }
+//                case R.id.button_del: {
+//                    // do something for button prev click
+//                    break;
+//                }
+//                case R.id.button_ent: {
+//                    // do something for button next click
+//                    break;
+//                }
+//
+//                case  R.id.button_dot: {
+//                    // do something for button submit click
+//                    break;
+//                }
+//
+//
+//                //.... etc
+//                default:
+//                    throw new IllegalStateException("Unexpected value: " + v.getId());
+//            }
+//        }
 
