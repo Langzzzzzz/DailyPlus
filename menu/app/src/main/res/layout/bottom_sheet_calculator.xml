@@ -62,7 +62,8 @@
                         android:layout_height="wrap_content"
                         android:text="3" />
                     <EditText
-                        android:id="@+id/editText"
+
+                        android:id="@+id/date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -94,7 +95,7 @@
                         android:layout_height="wrap_content"
                         android:text="6" />
                     <Button
-                        android:id="@+id/addButton"
+                        android:id="@+id/button_add"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:text="+" />
@@ -124,7 +125,8 @@
                         android:layout_height="wrap_content"
                         android:text="8" />
                     <Button
-                        android:id="@+id/minusButton"
+
+                        android:id="@+id/button_min"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:text="-" />
@@ -137,24 +139,32 @@
                     android:paddingLeft="16dp">
 
                     <Button
-                        android:id="@+id/button_point"
+
+                        android:id="@+id/button_dot"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="." />
 
                     <Button
-                        android:id="@+id/button10"
+
+                        android:id="@+id/button0"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0" />
 
                     <Button
-                        android:id="@+id/button_delete"
+
+                        android:id="@+id/button_del"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="delete" />
                     <Button
-                        android:id="@+id/enterButton"
+
+                        android:id="@+id/button_ent"
+
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:text="enter" />
