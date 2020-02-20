@@ -64,3 +64,6 @@
 
 ### What app looks like in our phone
 <img src="appScreencapture.png" width="400px" height="800px" />
+
+### Social Login
+<img src="socialLogin.png" width="400px" height="800px" />
