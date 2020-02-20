@@ -14,7 +14,8 @@
 	Period 	: Monday  3:00PM – 8:00PM
 		  Tuesday 3:00PM - 8:00PM
 
-	
+### Testing Machine:
+	  This application is tested based on Google Pixel 3a	
 ### What is your project?
 	A: Our project is an accounting mobile app.
 
@@ -56,8 +57,10 @@
 	
     Some people who care about the money management and student will use our app to record those daily bills. for point 1.1 and 1.4, our function and data that can help them to save and analysis they daily expenses. These processes can help those people to manage them account. Also, These functions are simple, and it simply records your expenses, your income, and then calculates the current balance. There is a pie chart on the top. You can see the various expenses as a percentage of the total. our team think our mobile app can bring uses following experience, Understand your own spending rules and Plan your monthly expenses, Make income and expenditure statistics, full of sense of accomplishment for our users.
 ### Loading Pic =>
-![loading](loading.png)
+<img src="loading.png" width="400px" height="800px" />
 
 ### Sliding menu pic =>
-![slidingmenu](slidingmenu.JPG)
+<img src="slidingmenu.JPG" width="400px" height="800px" />
 
+### What app looks like in our phone
+<img src="appScreencapture.png" width="400px" height="800px" />
