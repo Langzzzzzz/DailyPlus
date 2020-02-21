@@ -1,6 +1,8 @@
 package com.example.menu;
 
+
 import android.app.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -19,6 +21,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.widget.Button;
+
+//test fetch
 
 //test fetch
 
@@ -86,11 +90,11 @@ public class MainActivity extends AppCompatActivity {
         Intent calculatorIntet = new Intent(this, com.example.menu.BottomSheet.Calculator.class);
         startActivity(calculatorIntet);
     }
-
    /* public void opencategorypage(){
         Intent intent = new Intent(this, Category_Activity.class);
         startActivity(intent);
 
     }*/
+
 
 }

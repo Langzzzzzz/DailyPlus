@@ -18,11 +18,13 @@
                 android:title="@string/menu_bill"/>
 
         <item
+
             android:id="@+id/nav_categories"
             android:icon="@drawable/categories"
             android:title="@string/menu_categories"/>
 
         <item
+
             android:id="@+id/nav_chart"
             android:icon="@drawable/generate"
             android:title="@string/menu_generate" />
