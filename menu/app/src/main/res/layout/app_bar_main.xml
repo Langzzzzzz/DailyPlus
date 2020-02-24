@@ -21,7 +21,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main"/>
+    <include layout="@layout/content_main" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -30,6 +30,10 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:backgroundTint="#FFC107"
-        app:srcCompat="@drawable/round_add_white_48"/>
+        app:srcCompat="@drawable/round_add_white_48" />
+
+
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
