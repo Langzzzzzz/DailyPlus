@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,11 +32,12 @@ public class Calculator extends BottomSheetDialogFragment {
     private Button mButtonDel;
     private Button mButtonEnt;
 
+
 //    @Override
-////    protected void onCreate(Bundle savedInstanceState) {
-////        super.onCreate(savedInstanceState);
-////        setContentView(R.layout.bottom_sheet_calculator);
-////    }
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.bottom_sheet_calculator);
+//    }
 
     @Nullable
     @Override
