@@ -200,9 +200,9 @@ public class Calculator extends BottomSheetDialogFragment implements IBottomShee
                 // button . do...
                 if (isZero) {
                     amountText.setText("");
-                    amountText.append("2");
+                    amountText.append(".");
                 }else{
-                    amountText.append("2");
+                    amountText.append(".");
                 }
             }
         });
@@ -210,6 +210,9 @@ public class Calculator extends BottomSheetDialogFragment implements IBottomShee
             @Override
             public void onClick(View view) {
                 // button delete do...
+                String text = amountText.getText().toString();
+                amountText.setText(text.substring(0, text.length() - 1));
+
             }
         });
         mButtonAdd.setOnClickListener(new View.OnClickListener() {
