@@ -1,5 +1,21 @@
 <resources>
-    <string name="app_name">daily+</string>
-    <string name="record">No record found</string>
-    <string name= "sample_year">Feb 12, 2020</string>>
+    <string name="app_name">DailyPlus</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="drink">Drink</string>
+    <string name="snack">Snack</string>
+    <string name="eat_out">Eat Out</string>
+    <string name="rent">Rent</string>
+    <string name="food">Food</string>
+    <string name="groceries">Groceries</string>
+    <string name="taxi">Taxi</string>
+
+    <string name="facebook_app_id">209821333552905</string>
+    <string name="fb_login_protocol_scheme">fb209821333552905</string>
+
+    <string name="default_name">Daily Plus</string>
+
+    <string name="default_email">dailyplus001@gmail.com</string>
 </resources>
