@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/food"
+        android:title="@string/food" />
+
+    <item android:id="@+id/snack"
+        android:title="@string/snack" />
+
+    <item android:id="@+id/eatOut"
+        android:title="@string/eat_out" />
+
+    <item android:id="@+id/rent"
+        android:title="@string/rent"/>
+
+    <item android:id="@+id/groceries"
+        android:title="@string/groceries"/>
+
+    <item android:id="@+id/drink"
+        android:title="@string/drink"/>
+
+    <item android:id="@+id/taxi"
+        android:title="@string/taxi"/>
+
+</menu>
