@@ -13,7 +13,15 @@
     <string name="taxi">Taxi</string>
     <string name="youremail">Your Email: </string>
     <string name="feedback">Feedback: </string>
-    <string name="send">send</string>
+    <string name="contact">Contact Us</string>
+    <string name="communicate">Communicate</string>
+    <string name="setting">Setting</string>
+    <string name="chart">Setting</string>
+    <string name="category">Category</string>
+    <string name="home">Home</string>
+    <string name="bill">Bill</string>
+
+    <string name="send">Send</string>
 
     <string name="facebook_app_id">2547926432157526</string>
     <string name="fb_login_protocol_scheme">fb2547926432157526</string>
