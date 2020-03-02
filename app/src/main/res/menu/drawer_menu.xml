@@ -11,6 +11,19 @@
             android:icon="@drawable/ic_bill"
             android:title="Bill"/>
 
+        <item android:id="@+id/nav_category"
+            android:icon="@drawable/ic_cat"
+            android:title="Category"/>
+
+        <item android:id="@+id/nav_chart"
+            android:icon="@drawable/ic_pie"
+            android:title="Chart"/>
+
+        <item android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings"
+            android:title="Setting"/>
+
+
     </group>
 
     <item android:title="Communicate">
