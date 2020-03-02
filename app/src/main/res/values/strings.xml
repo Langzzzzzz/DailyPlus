@@ -11,6 +11,9 @@
     <string name="food">Food</string>
     <string name="groceries">Groceries</string>
     <string name="taxi">Taxi</string>
+    <string name="youremail">Your Email: </string>
+    <string name="feedback">Feedback: </string>
+    <string name="send">send</string>
 
     <string name="facebook_app_id">209821333552905</string>
     <string name="fb_login_protocol_scheme">fb209821333552905</string>
