@@ -18,7 +18,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.dailyplus.ui.bill_fragment;
+import com.example.dailyplus.ui.cat_fragment;
+import com.example.dailyplus.ui.chart_fragment;
 import com.example.dailyplus.ui.home_fragment;
+import com.example.dailyplus.ui.send_fragment;
+import com.example.dailyplus.ui.setting_fragment;
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
@@ -45,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private CircleImageView profileIcon;
     private TextView xmail,xname;
     private CallbackManager callbackManager;
+    private Toolbar toolbar;
     private static final String key = "key";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         drawer = findViewById(R.id.drawer_layout);
@@ -159,6 +165,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new home_fragment()).commit();
+                break;
+
+            case R.id.nav_bill:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new bill_fragment()).commit();
+                toolbar.setTitle("Bill");
+                break;
+
+            case R.id.nav_category:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new cat_fragment()).commit();
+                break;
+
+            case R.id.nav_setting:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new setting_fragment()).commit();
+                break;
+
+            case R.id.nav_chart:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new chart_fragment()).commit();
+                break;
+
+            case R.id.nav_send:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new send_fragment()).commit();
                 break;
         }
 
