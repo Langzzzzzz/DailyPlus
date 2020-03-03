@@ -7,5 +7,4 @@
     android:background="@drawable/loading"
     tools:context=".loadingScene">
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>

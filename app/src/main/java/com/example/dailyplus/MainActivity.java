@@ -165,6 +165,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new home_fragment()).commit();
+                toolbar.setTitle("Home");
+
                 break;
 
             case R.id.nav_bill:
@@ -176,21 +178,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_category:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new cat_fragment()).commit();
+                toolbar.setTitle("Category");
+
                 break;
 
             case R.id.nav_setting:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new setting_fragment()).commit();
+                toolbar.setTitle("Setting");
+
                 break;
 
             case R.id.nav_chart:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new chart_fragment()).commit();
+                toolbar.setTitle("Chart");
+
                 break;
 
             case R.id.nav_send:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new send_fragment()).commit();
+                toolbar.setTitle("Contact US");
+
                 break;
         }
 
