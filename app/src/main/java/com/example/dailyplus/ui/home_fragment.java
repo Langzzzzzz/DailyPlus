@@ -243,7 +243,7 @@ public class home_fragment extends Fragment implements CustomAdapter.OnItemListe
                 if (!isZero) {
                     compute();
                     ACTION = SUBTRACTION;
-                    result.append("-");
+                    result.append(SUBTRACTION+"");
                 }
             }
         });
@@ -315,7 +315,7 @@ public class home_fragment extends Fragment implements CustomAdapter.OnItemListe
             int opAt = 0;
             for (int i = 0; i < display.length(); i++){
                 if (display.charAt(i) == '+' || display.charAt(i) == '-')
-                    opAt = i;
+                    opAt = i+1;
             }
             val2 = Double.parseDouble(result.getText().toString().substring(opAt, display.length()));
 
@@ -369,6 +369,8 @@ public class home_fragment extends Fragment implements CustomAdapter.OnItemListe
             public void onChange(Object o) {
                 adapter = new CustomAdapter(getContext(),helper.justRefresh());
                 recyclerView.setAdapter(adapter);
+                if (adapter.getItemCount() > 0)
+                    recyclerView.smoothScrollToPosition(adapter.getItemCount());
             }
         };
         realm.addChangeListener(realmChangeListener);
