@@ -26,6 +26,8 @@ import com.example.dailyplus.Object.Expense;
 import com.example.dailyplus.R;
 
 import java.text.DateFormat;
+import java.text.Format;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import io.realm.Realm;
@@ -68,10 +70,10 @@ public class home_fragment extends Fragment implements CustomAdapter.OnItemListe
         helper.selectFromDB();
 
         calendar = Calendar.getInstance();
-        formatedDate = DateFormat.getDateInstance(DateFormat.MEDIUM).format(calendar.getTime());
+        formatedDate = DateFormat.getDateInstance(DateFormat.MONTH_FIELD).format(calendar.getTime());
 
         adapter = new CustomAdapter(getContext(), helper.justRefresh(),this);
-
+        Refresh();
 
     }
 
@@ -277,6 +279,7 @@ public class home_fragment extends Fragment implements CustomAdapter.OnItemListe
                     val1 = Double.NaN;
                     val2 = Double.NaN;
                     isZero = true;
+                    result.append("0");
                 }
             }
         });
@@ -292,6 +295,7 @@ public class home_fragment extends Fragment implements CustomAdapter.OnItemListe
                     result.setText(display);
                 }else{
                     isZero = true;
+
                 }
             }
         });
