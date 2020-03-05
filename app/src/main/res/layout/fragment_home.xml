@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
 
     <EditText
         android:id="@+id/editText2"
@@ -16,12 +17,14 @@
 
     <Button
         android:id="@+id/category"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="167dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="178dp"
+
         android:text="category" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -31,8 +34,9 @@
         android:layout_above="@+id/inputView"
         android:layout_alignParentTop="true"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="10dp"
-        android:text=" " />
+        android:layout_marginBottom="0dp"
+        android:text=" "
+        android:background="#FFFFFF"/>
 
     <Button
         android:id="@+id/b1"
@@ -42,7 +46,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="321dp"
         android:layout_marginBottom="169dp"
-        android:text="1" />
+        android:text="1"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/b2"
@@ -52,7 +58,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="222dp"
         android:layout_marginBottom="-2dp"
-        android:text="2" />
+        android:text="2"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/b3"
@@ -62,7 +70,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="126dp"
         android:layout_marginBottom="0dp"
-        android:text="3" />
+        android:text="3"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/b4"
@@ -72,7 +82,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="319dp"
         android:layout_marginBottom="117dp"
-        android:text="4" />
+        android:text="4"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/b5"
@@ -82,7 +94,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="220dp"
         android:layout_marginBottom="-2dp"
-        android:text="5" />
+        android:text="5"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/b6"
@@ -92,7 +106,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="123dp"
         android:layout_marginBottom="-3dp"
-        android:text="6" />
+        android:text="6"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/b7"
@@ -102,7 +118,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="319dp"
         android:layout_marginBottom="65dp"
-        android:text="7" />
+        android:text="7"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/b8"
@@ -112,7 +130,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="219dp"
         android:layout_marginBottom="0dp"
-        android:text="8" />
+        android:text="8"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/b9"
@@ -122,7 +142,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="127dp"
         android:layout_marginBottom="-2dp"
-        android:text="9" />
+        android:text="9"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/button_dot"
@@ -132,7 +154,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="316dp"
         android:layout_marginBottom="12dp"
-        android:text="." />
+        android:text="."
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/b0"
@@ -142,7 +166,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="219dp"
         android:layout_marginBottom="0dp"
-        android:text="0" />
+        android:text="0"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/plus"
@@ -152,7 +178,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="123dp"
         android:layout_marginBottom="14dp"
-        android:text="+" />
+        android:text="+"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/bmin"
@@ -162,7 +190,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="9dp"
-        android:text="-" />
+        android:text="-"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/bOK"
@@ -172,7 +202,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="62dp"
-        android:text="@android:string/yes" />
+        android:drawableRight="@drawable/ic_check"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
 
     <LinearLayout
@@ -211,7 +243,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="113dp"
-        android:text="clear" />
+        android:drawableRight="@drawable/ic_backspace"
+        android:textSize="30dp"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <EditText
         android:id="@+id/editText"
@@ -223,6 +257,7 @@
         android:layout_marginBottom="12dp"
         android:ems="10"
         android:hint="Location"
+
         android:inputType="textPersonName" />
 
 </RelativeLayout>
