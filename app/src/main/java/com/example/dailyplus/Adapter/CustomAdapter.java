@@ -85,7 +85,6 @@ public class CustomAdapter extends RecyclerView.Adapter<MyViewHolder>{
 
     public interface OnItemListener{
         void onItemClick(int position);
-
     }
 
 }
