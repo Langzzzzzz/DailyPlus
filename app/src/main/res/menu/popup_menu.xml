@@ -21,4 +21,7 @@
     <item android:id="@+id/taxi"
         android:title="@string/taxi"/>
 
+    <item android:id="@+id/gas"
+        android:title="Gas"/>
+
 </menu>

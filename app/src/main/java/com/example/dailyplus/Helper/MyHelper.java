@@ -20,6 +20,14 @@ public class MyHelper {
         expenses = realm.where(Expense.class).findAll();
     }
 
+    public ArrayList<Expense> selectFromDBDate(int year, int month, int day){
+        ArrayList<Expense> listItem = new ArrayList<>();
+        for (Expense e: expenses){
+
+        }
+        return listItem;
+    }
+
     public ArrayList<Expense> justRefresh(){
         ArrayList<Expense> listItem = new ArrayList<>();
         for(Expense e: expenses){
@@ -27,4 +35,6 @@ public class MyHelper {
         }
         return listItem;
     }
+
+
 }
