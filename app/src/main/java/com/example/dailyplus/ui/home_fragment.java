@@ -422,7 +422,11 @@ public class home_fragment extends Fragment implements CustomAdapter.OnItemListe
                     case R.id.taxi:
                         cat.setText("Taxi");
                         return true;
-                 }
+
+                    case R.id.gas:
+                        cat.setText("Gas");
+                        return true;
+                }
                 return false;
             }
         });
