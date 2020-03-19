@@ -18,6 +18,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.menu.MainActivity;
 import com.example.menu.R;
 import com.example.menu.data.Language;
+import com.example.menu.loadingPage;
 import com.example.menu.ui.language.LanguageFragment;
 
 public class CategoriesFragment extends Fragment implements View.OnClickListener {
@@ -46,7 +47,7 @@ public class CategoriesFragment extends Fragment implements View.OnClickListener
             if (categoryEnglish.getText().toString().equals("") || categoryChinese.getText().toString().equals("")) {
                 Toast.makeText(getActivity(), Language.bothEmptyHint(), Toast.LENGTH_SHORT).show();
             } else {
-                MainActivity.db.insertNewCategory(categoryEnglish.getText().toString(), categoryChinese.getText().toString());
+                loadingPage.db.insertNewCategory(categoryEnglish.getText().toString(), categoryChinese.getText().toString());
                 categoryEnglish.setText("");
                 categoryChinese.setText("");
             }
@@ -54,7 +55,7 @@ public class CategoriesFragment extends Fragment implements View.OnClickListener
             if (categoryEnglish.getText().toString().equals("")) {
                 Toast.makeText(getActivity(), Language.emptyHint(), Toast.LENGTH_SHORT).show();
             } else {
-                MainActivity.db.deleteCategory(categoryEnglish.getText().toString());
+                loadingPage.db.deleteCategory(categoryEnglish.getText().toString());
                 categoryEnglish.setText("");
             }
         }

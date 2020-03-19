@@ -29,6 +29,9 @@ public class DB extends SQLiteOpenHelper {
     private static final String COLUMN_ENGLISH = "English";
     private static final String COLUMN_CHINESE = "Chinese";
 
+    private static final String TABLE_PASSWORD_NAME = "password";
+    private static final String COLUMN_PASSWORD = "pw";
+
     public DB(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
@@ -47,6 +50,9 @@ public class DB extends SQLiteOpenHelper {
                 COLUMN_ENGLISH + " TEXT PRIMARY KEY," +
                 COLUMN_CHINESE + " TEXT NOT NULL);";
         db.execSQL(CATEGORY_CREATE);
+        String PASSWORD_CREATE = "CREATE TABLE " + TABLE_PASSWORD_NAME + "(" +
+                COLUMN_PASSWORD + " TEXT PRIMARY KEY);";
+        db.execSQL(PASSWORD_CREATE);
         ContentValues values = new ContentValues();
         values.put(COLUMN_ENGLISH, "food");
         values.put(COLUMN_CHINESE, "食物");
@@ -54,6 +60,42 @@ public class DB extends SQLiteOpenHelper {
         ContentValues values2 = new ContentValues();
         values2.put(COLUMN_ENGLISH, "traffic");
         values2.put(COLUMN_CHINESE, "交通");
+        db.insert(TABLE_CATEGORY_NAME, null, values2);
+        values2 = new ContentValues();
+        values2.put(COLUMN_ENGLISH, "gas");
+        values2.put(COLUMN_CHINESE, "加油");
+        db.insert(TABLE_CATEGORY_NAME, null, values2);
+        values2 = new ContentValues();
+        values2.put(COLUMN_ENGLISH, "gym");
+        values2.put(COLUMN_CHINESE, "健身");
+        db.insert(TABLE_CATEGORY_NAME, null, values2);
+        values2 = new ContentValues();
+        values2.put(COLUMN_ENGLISH, "house");
+        values2.put(COLUMN_CHINESE, "房屋");
+        db.insert(TABLE_CATEGORY_NAME, null, values2);
+        values2 = new ContentValues();
+        values2.put(COLUMN_ENGLISH, "insurance");
+        values2.put(COLUMN_CHINESE, "保险");
+        db.insert(TABLE_CATEGORY_NAME, null, values2);
+        values2 = new ContentValues();
+        values2.put(COLUMN_ENGLISH, "pet");
+        values2.put(COLUMN_CHINESE, "宠物");
+        db.insert(TABLE_CATEGORY_NAME, null, values2);
+        values2 = new ContentValues();
+        values2.put(COLUMN_ENGLISH, "shopping");
+        values2.put(COLUMN_CHINESE, "购物");
+        db.insert(TABLE_CATEGORY_NAME, null, values2);
+        values2 = new ContentValues();
+        values2.put(COLUMN_ENGLISH, "tele");
+        values2.put(COLUMN_CHINESE, "通话");
+        db.insert(TABLE_CATEGORY_NAME, null, values2);
+        values2 = new ContentValues();
+        values2.put(COLUMN_ENGLISH, "travel");
+        values2.put(COLUMN_CHINESE, "旅行");
+        db.insert(TABLE_CATEGORY_NAME, null, values2);
+        values2 = new ContentValues();
+        values2.put(COLUMN_ENGLISH, "income");
+        values2.put(COLUMN_CHINESE, "收入");
         db.insert(TABLE_CATEGORY_NAME, null, values2);
     }
 
@@ -81,6 +123,15 @@ public class DB extends SQLiteOpenHelper {
         values.put(COLUMN_ENGLISH, category);
         values.put(COLUMN_CHINESE, Chinese);
         long result = db.insert(TABLE_CATEGORY_NAME, null, values);
+        db.close();
+        return result;
+    }
+
+    public long insertPassword(String pw) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_PASSWORD, pw);
+        long result = db.insert(TABLE_PASSWORD_NAME, null, values);
         db.close();
         return result;
     }
@@ -126,6 +177,24 @@ public class DB extends SQLiteOpenHelper {
         String sql_delete = "DELETE FROM " + TABLE_NAME + " WHERE " + COLUMN_ID + "=" + id + ";";
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL(sql_delete);
+        db.close();
+    }
+
+    public String queryPassword() {
+        SQLiteDatabase db = getReadableDatabase();
+        String sql_query = "SELECT * FROM " + TABLE_PASSWORD_NAME;
+        Cursor cursor = db.rawQuery(sql_query, null);
+        if (cursor.moveToNext()) {
+            return cursor.getString(cursor.getColumnIndex(COLUMN_PASSWORD));
+        }
+        db.close();
+        return "";
+    }
+
+    public void modifyPassword(String old, String newPW) {
+        SQLiteDatabase db = getWritableDatabase();
+        String sql_update = "UPDATE " + TABLE_PASSWORD_NAME + " SET " + COLUMN_PASSWORD + "='" + newPW + "'" + " WHERE " + COLUMN_PASSWORD + "='" + old + "'";
+        db.execSQL(sql_update);
         db.close();
     }
 }

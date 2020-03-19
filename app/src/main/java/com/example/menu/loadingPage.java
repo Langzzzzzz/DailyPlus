@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 //import com.facebook.FacebookException;
 //import com.facebook.login.LoginResult;
 //import com.facebook.login.widget.LoginButton;
+import com.example.menu.database.DB;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
@@ -41,32 +42,15 @@ public class  loadingPage extends AppCompatActivity {
     FirebaseUser currentUser= FirebaseAuth.getInstance().getCurrentUser();
     private EditText passwordInput;
 
-    private String password;
-
+    public static String password;
+    public static DB db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        db = new DB(this);
+        password = db.queryPassword();
         setContentView(R.layout.loading);
         passwordInput = findViewById(R.id.password);
-        File file = new File(this.getFilesDir(), "file");
-        password = "";
-        if (file.exists()) {
-            try {
-                Scanner scanner = new Scanner(file);
-                if (scanner.hasNextLine()) {
-                    password = scanner.nextLine();
-                }
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        } else {
-            try {
-                file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
 //        // Initialize Facebook Login button
 //        mCallbackManager = CallbackManager.Factory.create();
 //        LoginButton loginButton = findViewById(R.id.login_button);
@@ -97,18 +81,18 @@ public class  loadingPage extends AppCompatActivity {
         Button login = findViewById(R.id.jumpButton);
         login.setOnClickListener(v->
         {
-            if (password.equals("") && !passwordInput.getText().toString().equals("")) {
-                Toast.makeText(this, passwordInput.getText().toString(), Toast.LENGTH_LONG).show();
-                try {
-                    PrintWriter writer = new PrintWriter(file);
-                    writer.println(passwordInput.getText());
-                    writer.flush();
-                    writer.close();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-                Toast.makeText(this, password, Toast.LENGTH_LONG).show();
+//            if (password.equals("") && !passwordInput.getText().toString().equals("")) {
+//                Toast.makeText(this, passwordInput.getText().toString(), Toast.LENGTH_LONG).show();
+//                try {
+//                    PrintWriter writer = new PrintWriter(file);
+//                    writer.println(passwordInput.getText());
+//                    writer.flush();
+//                    writer.close();
+//                } catch (FileNotFoundException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//                Toast.makeText(this, password, Toast.LENGTH_LONG).show();
             if (passwordInput.getText().toString().equals(password) || password.equals("")) {
                 Intent nextScreen = new Intent(loadingPage.this, MainActivity.class);
                 nextScreen.putExtra("user", "default");
