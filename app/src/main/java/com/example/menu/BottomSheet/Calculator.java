@@ -19,6 +19,7 @@ import com.example.menu.MainActivity;
 import com.example.menu.R;
 import com.example.menu.data.Language;
 import com.example.menu.data.Transaction;
+import com.example.menu.loadingPage;
 import com.example.menu.ui.home.HomeFragment;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -123,11 +124,16 @@ public class Calculator extends BottomSheetDialogFragment implements View.OnClic
             datePickerDialog.show();
         } else if (v.getId() == R.id.button_ent) {
             currentAmount = calculate(currentText);
+            if (categories.get(categoriesSpinner.getSelectedItemPosition()).equals("income")) {
+                currentAmount = Math.abs(currentAmount);
+            } else {
+                currentAmount = - Math.abs(currentAmount);
+            }
             Transaction transaction = new Transaction(currentAmount,
                     location.getText() == null ? "" : location.getText().toString(),
                     mButtonDate.getText().toString(),
                     categories.get(categoriesSpinner.getSelectedItemPosition()));
-            MainActivity.db.insertNewTransaction(MainActivity.user, transaction);
+            loadingPage.db.insertNewTransaction(MainActivity.user, transaction);
             MainActivity.transactions.add(transaction);
 //            getActivity().recreate();
             ((BaseAdapter)HomeFragment.adapter).notifyDataSetChanged();

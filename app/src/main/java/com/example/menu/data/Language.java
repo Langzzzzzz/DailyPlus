@@ -1,6 +1,7 @@
 package com.example.menu.data;
 
 import com.example.menu.MainActivity;
+import com.example.menu.loadingPage;
 import com.example.menu.ui.language.LanguageFragment;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class Language {
     }
 
     public static List<String> getCatogories() {
-        List<String> categories = MainActivity.db.queryAllCategories(LanguageFragment.isEnglish == 1);
+        List<String> categories = loadingPage.db.queryAllCategories(LanguageFragment.isEnglish == 1);
         return categories;
     }
 

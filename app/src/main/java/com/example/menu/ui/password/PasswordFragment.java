@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.menu.MainActivity;
 import com.example.menu.R;
 import com.example.menu.data.Language;
+import com.example.menu.loadingPage;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -42,37 +43,17 @@ public class PasswordFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.modify) {
-            File file = new File(getActivity().getFilesDir(), "file");
-            String password = "";
-            if (file.exists()) {
-                try {
-                    Scanner scanner = new Scanner(file);
-                    if (scanner.hasNextLine()) {
-                        password = scanner.nextLine();
-                    }
-                    scanner.close();
-                    if (password.equals("")) {
-                        if (!newPassword.getText().toString().equals("")) {
-                            PrintWriter writer = new PrintWriter(file);
-                            writer.println(newPassword.getText());
-                            writer.flush();
-                            writer.close();
-                            newPassword.setText("");
-                        }
+            if (!newPassword.getText().toString().equals("")) {
+                if (loadingPage.password.equals("")) {
+                    loadingPage.db.insertPassword(newPassword.getText().toString());
+                } else {
+                    if (originalPassword.getText().toString().equals(loadingPage.password)) {
+                        loadingPage.db.modifyPassword(originalPassword.getText().toString(), newPassword.getText().toString());
+                        originalPassword.setText("");
+                        newPassword.setText("");
                     } else {
-                        if (originalPassword.getText().toString().equals(password) && !newPassword.getText().toString().equals("")) {
-                            PrintWriter writer = new PrintWriter(file);
-                            writer.println(newPassword.getText());
-                            writer.flush();
-                            writer.close();
-                            originalPassword.setText("");
-                            newPassword.setText("");
-                        } else {
-                            Toast.makeText(getActivity(), "Incorrect original password", Toast.LENGTH_LONG).show();
-                        }
+                        Toast.makeText(getActivity(), "Incorrect original password", Toast.LENGTH_SHORT).show();
                     }
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
                 }
             }
         }

@@ -22,6 +22,7 @@ import com.example.menu.MainActivity;
 import com.example.menu.R;
 import com.example.menu.data.Language;
 import com.example.menu.data.Transaction;
+import com.example.menu.loadingPage;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -101,7 +102,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         listView.setAdapter(adapter);
         listView.setOnItemLongClickListener((parent, view, position, id) -> {
             System.out.println("long lick " + adapter.getItem(position).getId());
-            MainActivity.db.deleteTransaction(adapter.getItem(position).getId());
+            loadingPage.db.deleteTransaction(adapter.getItem(position).getId());
             MainActivity.transactions.remove(adapter.getItem(position));
             adapter.notifyDataSetChanged();
             return true;
@@ -207,6 +208,24 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.food, null));
                 } else if (getItem(position).getCategory().toLowerCase().equals("traffic")) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.traffic, null));
+                }  else if (getItem(position).getCategory().toLowerCase().equals("gas")) {
+                    image.setImageDrawable(getResources().getDrawable(R.drawable.gas, null));
+                }  else if (getItem(position).getCategory().toLowerCase().equals("gym")) {
+                    image.setImageDrawable(getResources().getDrawable(R.drawable.gym, null));
+                }  else if (getItem(position).getCategory().toLowerCase().equals("house")) {
+                    image.setImageDrawable(getResources().getDrawable(R.drawable.house, null));
+                }  else if (getItem(position).getCategory().toLowerCase().equals("income")) {
+                    image.setImageDrawable(getResources().getDrawable(R.drawable.income, null));
+                }  else if (getItem(position).getCategory().toLowerCase().equals("insurance")) {
+                    image.setImageDrawable(getResources().getDrawable(R.drawable.insurance, null));
+                }  else if (getItem(position).getCategory().toLowerCase().equals("pet")) {
+                    image.setImageDrawable(getResources().getDrawable(R.drawable.pet, null));
+                }  else if (getItem(position).getCategory().toLowerCase().equals("shopping")) {
+                    image.setImageDrawable(getResources().getDrawable(R.drawable.shopping, null));
+                }  else if (getItem(position).getCategory().toLowerCase().equals("tele")) {
+                    image.setImageDrawable(getResources().getDrawable(R.drawable.tele, null));
+                }  else if (getItem(position).getCategory().toLowerCase().equals("travel")) {
+                    image.setImageDrawable(getResources().getDrawable(R.drawable.travel, null));
                 } else {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.others, null));
                 }
