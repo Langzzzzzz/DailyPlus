@@ -60,8 +60,15 @@
         tools:layout="@layout/fragment_send" />
 
     <fragment
-        android:id="@+id/nav_password"
-        android:name="com.example.menu.ui.password.PasswordFragment"
+    android:id="@+id/nav_password"
+    android:name="com.example.menu.ui.password.PasswordFragment"
+    android:label="@string/menu_password"
+    tools:layout="@layout/fragment_password" />
+
+    <fragment
+        android:id="@+id/nav_feedback"
+        android:name="com.example.menu.ui.feedback.FeedbackFragment"
         android:label="@string/menu_password"
         tools:layout="@layout/fragment_password" />
+
 </navigation>
