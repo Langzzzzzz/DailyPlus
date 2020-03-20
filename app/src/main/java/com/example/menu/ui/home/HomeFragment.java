@@ -167,10 +167,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
             @Override
             public void onDateChanged(DatePicker view, int year, int month, int day) {
-//                String dateString = year + "-" + (month + 1);
-//                if (month < 9) {
-//                    dateString = year + "-0" + (month + 1);
-//                }
                 homeYear.setText(year + Language.year());
                 homeMonth.setText(month < 9 ? "0" + (month + 1) : month + "");
                 adapter.notifyDataSetChanged();
