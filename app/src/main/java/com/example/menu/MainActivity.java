@@ -73,12 +73,11 @@ public class MainActivity extends AppCompatActivity {
     public static List<Transaction> transactions;
 
 
-    private DrawerLayout drawer;
-
     private LoginButton loginButton;
     private CircleImageView profileIcon;
     private TextView xmail,xname;
     private CallbackManager callbackManager;
+    private Toolbar toolbar;
 
 
     @Override
@@ -91,10 +90,32 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        drawer = findViewById(R.id.drawer_layout);
+
+        fab = findViewById(R.id.fab);
+        fab.setOnClickListener(view -> {
+            Calculator calculator = new Calculator();
+            calculator.show(getSupportFragmentManager(), "Calculator bottom sheet");
+        });
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.nav_home, R.id.nav_bill, R.id.nav_slideshow,R.id.nav_categories,
+                R.id.nav_language,R.id.nav_chart,
+                R.id.nav_tools, R.id.nav_share, R.id.nav_password, R.id.nav_send)
+                .setDrawerLayout(drawer)
+                .build();
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+//        NavigationUI.setupWithNavController(navigationView, navController);
+        navigationView.setNavigationItemSelectedListener(listener);
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
+
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         View header = navigationView.getHeaderView(0);
-
 
         loginButton = header.findViewById(R.id.login_btn);
         profileIcon = header.findViewById(R.id.profile_icon);
@@ -128,35 +149,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        fab = findViewById(R.id.fab);
-        fab.setOnClickListener(view -> {
-            Calculator calculator = new Calculator();
-            calculator.show(getSupportFragmentManager(), "Calculator bottom sheet");
-        });
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_bill, R.id.nav_slideshow,R.id.nav_categories,
-                R.id.nav_language,R.id.nav_chart,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_password, R.id.nav_send)
-                .setDrawerLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-//        NavigationUI.setupWithNavController(navigationView, navController);
-        navigationView.setNavigationItemSelectedListener(listener);
-        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-        StrictMode.setVmPolicy(builder.build());
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         callbackManager.onActivityResult(requestCode,resultCode,data);
         super.onActivityResult(requestCode, resultCode, data);
     }
-
 
     AccessTokenTracker tokenTracker = new AccessTokenTracker() {
         @Override
@@ -194,11 +192,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
         Bundle parameters = new Bundle();
         parameters.putString("fields","first_name,last_name,email,id");
         request.setParameters(parameters);
         request.executeAsync();
     }
+
 
 
 
