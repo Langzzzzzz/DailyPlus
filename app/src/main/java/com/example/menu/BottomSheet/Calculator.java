@@ -135,7 +135,7 @@ public class Calculator extends BottomSheetDialogFragment implements View.OnClic
                     categories.get(categoriesSpinner.getSelectedItemPosition()));
             loadingPage.db.insertNewTransaction(MainActivity.user, transaction);
             MainActivity.transactions.add(transaction);
-//            getActivity().recreate();
+
             ((BaseAdapter)HomeFragment.adapter).notifyDataSetChanged();
             this.dismiss();
         } else if (v.getId() == R.id.button_dot) {
@@ -150,7 +150,10 @@ public class Calculator extends BottomSheetDialogFragment implements View.OnClic
                 }
             }
         } else if (v.getId() == R.id.button_del) {
-            currentText = currentText.substring(0, currentText.length() - 1);
+            if (currentText.length() > 0){
+                currentText = currentText.substring(0, currentText.length() - 1);
+            }
+
         } else if (v.getId() == R.id.button_add || v.getId() == R.id.button_min) {
             if (!currentText.contains("+") && !currentText.contains("-")) {
                 currentText += v.getId() == R.id.button_add ? "+" : "-";
