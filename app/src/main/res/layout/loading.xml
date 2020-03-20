@@ -25,16 +25,6 @@
             android:inputType="numberPassword"/>
     </LinearLayout>
 
-
-    <!--<com.facebook.login.widget.LoginButton-->
-        <!--android:id="@+id/login_button"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -44,7 +34,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id = "@+id/jumpButton"
-            android:text="Skip Log in" />
+            android:text="Enter" />
     </LinearLayout>
-        <!--app:layout_constraintTop_toTopOf="@id/login_button"/>-->
 </LinearLayout>

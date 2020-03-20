@@ -111,10 +111,8 @@ public class MainActivity extends AppCompatActivity {
                     File file = new File(dir, "statistics.xls");
                     if (!file.exists())
                         file.createNewFile();
-//                    FileOutputStream fileOut = new FileOutputStream(file);
-//                    wb.write(fileOut);
-//                    wb.close();
-                    WritableWorkbook workbook = Workbook.createWorkbook(file); // 创建一个可读写的副本
+
+                    WritableWorkbook workbook = Workbook.createWorkbook(file);
                     workbook.createSheet("sheet0", 0);
                     WritableSheet sheet = workbook.getSheet(0);
 
