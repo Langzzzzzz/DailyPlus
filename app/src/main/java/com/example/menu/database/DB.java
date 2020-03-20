@@ -70,7 +70,7 @@ public class DB extends SQLiteOpenHelper {
         values2.put(COLUMN_CHINESE, "健身");
         db.insert(TABLE_CATEGORY_NAME, null, values2);
         values2 = new ContentValues();
-        values2.put(COLUMN_ENGLISH, "house");
+        values2.put(COLUMN_ENGLISH, "rent");
         values2.put(COLUMN_CHINESE, "房屋");
         db.insert(TABLE_CATEGORY_NAME, null, values2);
         values2 = new ContentValues();
