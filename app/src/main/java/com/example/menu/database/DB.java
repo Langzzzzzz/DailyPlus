@@ -143,7 +143,6 @@ public class DB extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(sql_query, null);
         while (cursor.moveToNext()) {
             Transaction transaction = new Transaction(cursor.getDouble(2), cursor.getString(3), cursor.getString(4), cursor.getString(5));
-//            System.out.println(cursor.getInt(cursor.getColumnIndex(COLUMN_ID)) + " " + cursor.getColumnIndex(COLUMN_ID));
             transaction.setId(cursor.getInt(cursor.getColumnIndex(COLUMN_ID)));
             transactions.add(transaction);
         }
