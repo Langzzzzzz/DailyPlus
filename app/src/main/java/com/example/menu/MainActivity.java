@@ -5,12 +5,23 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.menu.BottomSheet.Calculator;
 import com.example.menu.data.Language;
 import com.example.menu.data.StatisticData;
 import com.example.menu.data.Statistics;
 import com.example.menu.data.Transaction;
 import com.example.menu.database.DB;
+import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import android.os.StrictMode;
@@ -18,6 +29,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -29,13 +41,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.ViewParent;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
 
+import java.util.Arrays;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import jxl.Workbook;
 import jxl.write.Label;
 import jxl.write.WritableCellFeatures;
@@ -54,6 +72,15 @@ public class MainActivity extends AppCompatActivity {
     public static String user;
     public static List<Transaction> transactions;
 
+
+    private DrawerLayout drawer;
+
+    private LoginButton loginButton;
+    private CircleImageView profileIcon;
+    private TextView xmail,xname;
+    private CallbackManager callbackManager;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +90,44 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        View header = navigationView.getHeaderView(0);
+
+
+        loginButton = header.findViewById(R.id.login_btn);
+        profileIcon = header.findViewById(R.id.profile_icon);
+        xmail = header.findViewById(R.id.profile_email);
+        xname = header.findViewById(R.id.profile_name);
+        System.out.println("001"+xname.getText().toString());
+        loginButton.setOnClickListener(e->
+        {
+            System.out.println("Login Button Clicked");
+
+
+        });
+
+        callbackManager = CallbackManager.Factory.create();
+        loginButton.setReadPermissions(Arrays.asList("email","public_profile"));
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+
+            }
+
+            @Override
+            public void onCancel() {
+
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+
+            }
+        });
+
+
         fab = findViewById(R.id.fab);
         fab.setOnClickListener(view -> {
             Calculator calculator = new Calculator();
@@ -85,6 +150,59 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        callbackManager.onActivityResult(requestCode,resultCode,data);
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+
+    AccessTokenTracker tokenTracker = new AccessTokenTracker() {
+        @Override
+        protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
+            if (currentAccessToken == null)
+            {
+                xmail.setText(R.string.default_email);
+                xname.setText(R.string.default_name);
+                profileIcon.setImageResource(R.drawable.applogo);
+                Toast.makeText(MainActivity.this,"User Logged Out",Toast.LENGTH_LONG).show();
+            }
+            else{
+                loadUserProfile(currentAccessToken);
+            }
+        }
+    };
+    public void loadUserProfile(AccessToken newAccessToken)
+    {
+        GraphRequest request = GraphRequest.newMeRequest(newAccessToken, new GraphRequest.GraphJSONObjectCallback() {
+            @Override
+            public void onCompleted(JSONObject object, GraphResponse response) {
+                try {
+                    String first_name = object.getString("first_name");
+                    String last_name = object.getString("last_name");
+                    String email = object.getString("email");
+                    String id = object.getString("id");
+                    String image_url = "https://graph.facebook.com/"+id+"/picture?type=normal";
+                    xmail.setText(email);
+                    xname.setText(first_name+" "+last_name);
+                    RequestOptions requestOptions = new RequestOptions();
+                    requestOptions.dontAnimate();
+                    Glide.with(MainActivity.this).load(image_url).into(profileIcon);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        Bundle parameters = new Bundle();
+        parameters.putString("fields","first_name,last_name,email,id");
+        request.setParameters(parameters);
+        request.executeAsync();
+    }
+
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -199,4 +317,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     };
+
+
 }
