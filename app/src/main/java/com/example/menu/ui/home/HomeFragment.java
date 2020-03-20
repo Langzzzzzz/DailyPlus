@@ -118,6 +118,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             double expense = 0;
             transactions.add(0, new Transaction(0, null, transactions.get(0).getDateString(), null));
             for (int i = 1; i < transactions.size();) {
+                // if tag already exist
                 if (transactions.get(i).getDateString().equals(transactionTags.get(transactionTags.size() - 1))) {
                     if (transactions.get(i).getAmount() < 0) {
                         expense += transactions.get(i).getAmount();
@@ -127,6 +128,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     i++;
                     continue;
                 } else {
+                    //make new tag and add incomes
                     incomes.add(income);
                     expenses.add(expense);
                     income = 0;
