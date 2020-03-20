@@ -39,6 +39,10 @@
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/menu_send" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/feedback"
+                android:title="@string/menu_feedback" />
         </menu>
     </item>
 

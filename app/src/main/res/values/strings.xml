@@ -21,6 +21,7 @@
     <string name="menu_language">Language</string>
     <string name="menu_categories">Categories</string>
     <string name="menu_password">Password</string>
+    <string name="menu_feedback">Feedback</string>
 
     <string name="nav_communicate">Communicate</string>
 
@@ -33,6 +34,10 @@
     <string name="fb_login_protocol_scheme">fb2547926432157526</string>
     <string name="login">Login</string>
     <string name="open">open</string>
+
+    <string name="youremail">Mail to: </string>
+    <string name="feedback">Feedback: </string>
+    <string name="send">Send</string>
 
     <string name="location">Location</string>
 </resources>
