@@ -45,19 +45,24 @@ public class PieView extends View {
             return;
         float currentStartAngle = mStartAngle;
         canvas.translate(mWidth / 2, mHeight / 2);
-        float r = (float) (Math.min(mWidth, mHeight) / 2 * 0.8);
+        float r = (float) (Math.min(mWidth, mHeight - 100) / 2 * 0.8);
         RectF rect = new RectF(-r, -r, r, r);
+        int width = mWidth / 200;
 
         for (int i = 0; i < data.size(); i++) {
             StatisticData pie = data.get(i);
             painter.setColor(pie.getColor());
+            RectF category = new RectF(10 + 200 * (i % width) - mWidth / 2, 10 + 50 * (i / width) - r - 100, 10 + 200 * (i % width) + 40 - mWidth / 2, 10 + 50 * (i / width) + 40 - r - 100);
+            canvas.drawRect(category, painter);
+            painter.setTextSize(30);
+            canvas.drawText(pie.getCategory(), 10 + 200 * (i % width) - mWidth / 2 + 45, 10 + 50 * (i / width) - r - 65, painter);
             canvas.drawArc(rect, currentStartAngle, pie.getAngle(), true, painter);
             painter.setColor(Color.BLACK);
             painter.setStrokeWidth(8);
             double x = Math.cos(Math.toRadians(currentStartAngle + pie.getAngle() / 2)) * r;
             double y = Math.sin(Math.toRadians(currentStartAngle + pie.getAngle() / 2)) * r;
-            canvas.drawText(pie.getCategory(), (float) x, (float) y, painter);
-            canvas.drawText(pie.getAmount() + "", (float) x, (float) y + 50, painter);
+            painter.setTextSize(40);
+            canvas.drawText(pie.getAmount() + "", (float) x, (float) y, painter);
             currentStartAngle += pie.getAngle();
         }
 
