@@ -68,6 +68,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         homeMonthLabel.setOnClickListener(this);
         homeDropDown.setOnClickListener(this);
 
+        //set the calendar
         Calendar ca = Calendar.getInstance();
         int mYear = ca.get(Calendar.YEAR);
         int mMonth = ca.get(Calendar.MONTH);
@@ -78,6 +79,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             dateString = mYear + "-0" + (mMonth + 1);
         }
 
+        //pull data from the database
         transactions = new ArrayList<>();
         double totalIncome = 0;
         double totalExpense = 0;
@@ -90,14 +92,21 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 transactions.add(transaction);
             }
         }
+
         homeIncome.setText(totalIncome + "");
-        homeExpense.setText(totalExpense + "");
+        if (totalExpense == 0){
+            homeExpense.setText(totalExpense + "");
+        }else {
+            homeExpense.setText((totalExpense + "").substring(1));
+        }
+
         listView = root.findViewById(R.id.transaction_list);
         transactionTags = new ArrayList<>();
         expenses = new ArrayList<>();
         incomes = new ArrayList<>();
         Collections.sort(transactions, (transaction, t1) -> t1.getDate().compareTo(transaction.getDate()));
         setData();
+
         adapter = new TransactionListAdapter(getActivity(), transactions, transactionTags);
         listView.setAdapter(adapter);
         listView.setOnItemLongClickListener((parent, view, position, id) -> {
@@ -228,7 +237,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.others, null));
                 }
                 description.setText(getItem(position).getCategory());
-                amount.setText(getItem(position).getAmount() + "");
+
+                if((getItem(position).getAmount() + " ").contains("-")){
+                    amount.setText((getItem(position).getAmount() + "").substring(1));
+                }else {
+                    amount.setText(getItem(position).getAmount() + "");
+                }
+
+
             }
             return view;
         }
@@ -257,7 +273,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 }
             }
             homeIncome.setText(totalIncome + "");
-            homeExpense.setText(totalExpense + "");
+            homeExpense.setText((totalExpense + "").substring(1));
             transactionTags.clear();
             incomes.clear();
             expenses.clear();
