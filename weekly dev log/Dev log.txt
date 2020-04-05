@@ -17,7 +17,7 @@ Week2:
 * Haiyang
    * Group meeting, discuss the task distribution for each team member 
    
-Week3: (D1)
+Week3:
 * Everyone
    * loading interface done.
    * The sliding menu still needs some work. Expect done by next week
@@ -48,7 +48,7 @@ Week5:
    * Layout of profile section
    * Different situation for login and logout
    
-Week6: (D2)
+Week6:
 * Jie and Zhenqing: 
    * create a pie chart, but can not connect between data from the database with pie chart API, thus just hard code a pie chart to see how api works,fix it as soon as possible.
 * Haiyang
