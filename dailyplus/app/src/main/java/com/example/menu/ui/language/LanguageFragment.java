@@ -7,13 +7,16 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+import android.widget.Toolbar;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import com.example.menu.R;
+import com.example.menu.ui.home.HomeFragment;
 
 public class LanguageFragment extends Fragment {
     public static int isEnglish = 1;
@@ -21,14 +24,20 @@ public class LanguageFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
         View root = inflater.inflate(R.layout.fragment_language, container, false);
+
+
         languageButton = root.findViewById(R.id.language_button);
+
         languageButton.setChecked(isEnglish == 1);
         languageButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 isEnglish = 1;
+
             } else {
                 isEnglish = 0;
+
             }
         });
         return root;
