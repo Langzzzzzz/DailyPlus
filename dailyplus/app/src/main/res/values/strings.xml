@@ -4,9 +4,10 @@
     <string name="app_name">Daily+</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Daily+</string>
 
-    <string name="nav_header_subtitle">Daily+@cmail.carleton.ca</string>
+    <string name="default_name">Daily+</string>
+    <string name="default_email">Daily+@cmail.carleton.ca</string>
+
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
