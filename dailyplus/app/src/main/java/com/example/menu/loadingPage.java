@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 //import com.facebook.login.LoginResult;
 //import com.facebook.login.widget.LoginButton;
 import com.example.menu.database.DB;
+import com.github.florent37.materialtextfield.MaterialTextField;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
@@ -42,7 +43,7 @@ public class  loadingPage extends AppCompatActivity {
     private FirebaseApp mAuth = FirebaseApp.getInstance();
     FirebaseUser currentUser= FirebaseAuth.getInstance().getCurrentUser();
     private EditText passwordInput;
-
+    MaterialTextField materialTextField;
     public static String password;
     public static DB db;
     @Override
@@ -51,59 +52,26 @@ public class  loadingPage extends AppCompatActivity {
         db = new DB(this);
         password = db.queryPassword();
         setContentView(R.layout.loading);
-        passwordInput = findViewById(R.id.password);
+        passwordInput = findViewById(R.id.numberPassword);
+        materialTextField = findViewById(R.id.mat);
         if (password.equals("")) {
             passwordInput.setVisibility(View.INVISIBLE);
-        }
-//        // Initialize Facebook Login button
-//        mCallbackManager = CallbackManager.Factory.create();
-//        LoginButton loginButton = findViewById(R.id.login_button);
-//        loginButton.setReadPermissions("email", "public_profile");
-//        loginButton.registerCallback(mCallbackManager, new
-//                FacebookCallback<LoginResult>() {
-//            @Override
-//            public void onSuccess(LoginResult loginResult) {
-//                Log.d("Success", "facebook:onSuccess:" + loginResult);
-////                handleFacebookAccessToken(loginResult.getAccessToken());
-//            }
-//
-//            @Override
-//            public void onCancel() {
-//                Log.d("Cancel", "facebook:onCancel");
-//                // ...
-//            }
-//
-//            @Override
-//            public void onError(FacebookException error) {
-//                Log.d("Error", "facebook:onError", error);
-//                // ...
-//            }
-//        });
+            materialTextField.setVisibility(View.INVISIBLE);
 
-// ...
+        }
+        //should fix this by first time launch !
+
 
         Button login = findViewById(R.id.jumpButton);
         login.setOnClickListener(v->
         {
-//            if (password.equals("") && !passwordInput.getText().toString().equals("")) {
-//                Toast.makeText(this, passwordInput.getText().toString(), Toast.LENGTH_LONG).show();
-//                try {
-//                    PrintWriter writer = new PrintWriter(file);
-//                    writer.println(passwordInput.getText());
-//                    writer.flush();
-//                    writer.close();
-//                } catch (FileNotFoundException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//            Toast.makeText(this, password + "", Toast.LENGTH_LONG).show();
             if (passwordInput.getText().toString().equals(password) || password.equals("")) {
                 Intent nextScreen = new Intent(loadingPage.this, MainActivity.class);
                 nextScreen.putExtra("user", "default");
                 startActivity(nextScreen);
                 finish();
             } else {
-                Toast.makeText(this, "Incorrect password", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Incorrect password", Toast.LENGTH_SHORT).show();
             }
         });
 

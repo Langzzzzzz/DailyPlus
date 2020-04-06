@@ -42,5 +42,7 @@
     <string name="unlock">Unlock</string>
 
     <string name="location">Location</string>
+    <string name="passwordHint">Please enter password</string>
+
 </resources>
 
