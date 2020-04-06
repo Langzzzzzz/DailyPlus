@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                 xmail.setText(R.string.default_email);
                 xname.setText(R.string.default_name);
                 profileIcon.setImageResource(R.drawable.applogo);
-                Toast.makeText(MainActivity.this,"User Logged Out",Toast.LENGTH_LONG).show();
+//                Toast.makeText(MainActivity.this,"User Logged Out",Toast.LENGTH_LONG).show();
             }
             else{
                 loadUserProfile(currentAccessToken);

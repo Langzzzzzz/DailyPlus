@@ -142,7 +142,7 @@ public class  loadingPage extends AppCompatActivity {
     }
     public void updateUI(FirebaseUser currentUser){
         //do something with user then
-        Toast.makeText(loadingPage.this,"You just login",Toast.LENGTH_LONG).show();
+//        Toast.makeText(loadingPage.this,"You just login",Toast.LENGTH_LONG).show();
     }
 
 

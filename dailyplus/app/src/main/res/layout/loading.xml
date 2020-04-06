@@ -10,21 +10,6 @@
     android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
     tools:context=".loadingPage">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:layout_weight="9">
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginHorizontal="50dp"
-            android:hint="Input the password"
-            android:inputType="numberPassword"/>
-    </LinearLayout>
-
 
     <!--<com.facebook.login.widget.LoginButton-->
         <!--android:id="@+id/login_button"-->
@@ -35,16 +20,36 @@
         <!--app:layout_constraintEnd_toEndOf="parent"-->
         <!--app:layout_constraintStart_toStartOf="parent"-->
         <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:gravity="center"
+            android:hint="Input the password"
+            android:inputType="numberPassword" />
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:gravity="center"
         android:layout_weight="1">
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:id = "@+id/jumpButton"
-            android:text="Log in" />
+            android:background="@drawable/ripple_button"
+            android:layout_marginHorizontal="50dp"
+            android:textColor="@color/black"
+            android:text="@string/unlock" />
     </LinearLayout>
         <!--app:layout_constraintTop_toTopOf="@id/login_button"/>-->
 </LinearLayout>
