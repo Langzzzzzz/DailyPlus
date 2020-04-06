@@ -59,11 +59,17 @@
 ### Loading Pic =>
 <img src="loading.png" width="400px" height="800px" />
 
-### Sliding menu pic =>
-<img src="slidingmenu.JPG" width="400px" height="800px" />
+### Sliding menu and social log in =>
+<img src="sileding_menu_login.png" width="400px" height="800px" />
 
 ### What app looks like in our phone
 <img src="appScreencapture.png" width="400px" height="800px" />
 
-### Social Login
-<img src="socialLogin.png" width="400px" height="800px" />
+### Show user's spend and income data in home page
+<img src="list_view.png" width="400px" height="800px" />
+
+### Visulization data in Pie Chart
+<img src="pie_chart.png" width="400px" height="800px" />
+
+### We also welcome user send feedback to us
+<img src="feedback.png" width="400px" height="800px" />
