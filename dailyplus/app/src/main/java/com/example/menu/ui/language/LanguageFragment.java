@@ -17,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+
+import com.example.menu.MainActivity;
 import com.example.menu.R;
 import com.example.menu.ui.home.HomeFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -36,6 +38,7 @@ public class LanguageFragment extends Fragment {
     private MenuItem feedback;
     private MenuItem communicate;
     private MenuItem send;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         navigationView = Objects.requireNonNull(getActivity()).findViewById(R.id.nav_view);
@@ -77,6 +80,8 @@ public class LanguageFragment extends Fragment {
         send.setTitle("发送");
         feedback.setTitle("联系我们");
         language.setTitle("语言");
+        
+
     }
     public void setEnglish(){
         communicate.setTitle("Communicate");

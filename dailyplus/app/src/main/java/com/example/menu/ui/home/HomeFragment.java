@@ -206,27 +206,27 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 ImageView image = view.findViewById(R.id.item_pic);
                 TextView description = view.findViewById(R.id.item_description);
                 TextView amount = view.findViewById(R.id.item_amount);
-                if (getItem(position).getCategory().toLowerCase().equals("food")) {
+                if (getItem(position).getCategory().toLowerCase().equals("food") || getItem(position).getCategory().equals("食物")) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.food, null));
-                } else if (getItem(position).getCategory().toLowerCase().equals("traffic")) {
+                } else if (getItem(position).getCategory().toLowerCase().equals("traffic") || getItem(position).getCategory().equals("交通")) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.traffic, null));
-                }  else if (getItem(position).getCategory().toLowerCase().equals("gas")) {
+                }  else if (getItem(position).getCategory().toLowerCase().equals("gas") || getItem(position).getCategory().equals("加油")) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.gas, null));
-                }  else if (getItem(position).getCategory().toLowerCase().equals("gym")) {
+                }  else if (getItem(position).getCategory().toLowerCase().equals("gym") || getItem(position).getCategory().equals("健身")) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.gym, null));
-                }  else if (getItem(position).getCategory().toLowerCase().equals("house")) {
+                }  else if (getItem(position).getCategory().toLowerCase().equals("house")|| getItem(position).getCategory().equals("房屋")) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.house, null));
-                }  else if (getItem(position).getCategory().toLowerCase().equals("income")) {
+                }  else if (getItem(position).getCategory().toLowerCase().equals("income")|| getItem(position).getCategory().equals("收入")) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.income, null));
-                }  else if (getItem(position).getCategory().toLowerCase().equals("insurance")) {
+                }  else if (getItem(position).getCategory().toLowerCase().equals("insurance")|| getItem(position).getCategory().equals("保险")) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.insurance, null));
-                }  else if (getItem(position).getCategory().toLowerCase().equals("pet")) {
+                }  else if (getItem(position).getCategory().toLowerCase().equals("pet")|| getItem(position).getCategory().equals("宠物")) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.pet, null));
-                }  else if (getItem(position).getCategory().toLowerCase().equals("shopping")) {
+                }  else if (getItem(position).getCategory().toLowerCase().equals("shopping")|| getItem(position).getCategory().equals("购物")) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.shopping, null));
-                }  else if (getItem(position).getCategory().toLowerCase().equals("tele")) {
+                }  else if (getItem(position).getCategory().toLowerCase().equals("tele")|| getItem(position).getCategory().equals("通话")) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.tele, null));
-                }  else if (getItem(position).getCategory().toLowerCase().equals("travel")) {
+                }  else if (getItem(position).getCategory().toLowerCase().equals("travel")|| getItem(position).getCategory().equals("旅行")) {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.travel, null));
                 } else {
                     image.setImageDrawable(getResources().getDrawable(R.drawable.others, null));
