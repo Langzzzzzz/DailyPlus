@@ -1,3 +1,0 @@
-1. design the loading interface together.
-2. design the app logo with my teammates.
-3. main interface coming soon.

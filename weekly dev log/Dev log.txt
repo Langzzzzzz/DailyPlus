@@ -1,0 +1,100 @@
+﻿Week1:  
+All member: 
+1. Pick a team name.
+2. Choose an android system to develop.
+3. Decide to develop a spence tracker application.
+
+Week2:
+* Payton
+   * generate application loading picture with teammates
+   * plan the structure of the programme
+   * task distribution
+   * had a group meeting with teammates
+* Lang and Jie:
+   * design the loading interface together.
+   * design the app logo with my teammates.
+   * main interface coming soon.
+* Haiyang
+   * Group meeting, discuss the task distribution for each team member 
+   
+Week3:
+* Everyone
+   * loading interface done.
+   * The sliding menu still needs some work. Expect done by next week
+   * main color tone confirmeds
+* Haiyang
+   * Use realm to build database, and create class to assess the database
+* Payton
+   * Design of MVC, Database, XML and Java code interact with each other
+   
+Week4:
+* Jie and Zhenqing
+   * design user interface.
+* Haiyang
+   * Finish the Build-in calculator
+   * Can store spending record into database
+* Payton
+   * Write comments to explain things better
+   * Delete redundant code
+   
+Week5: 
+* Jie and Zhenqing: 
+   * try to make a feedback function, but have some issues like cannot auto send to the userf and some issues with google API.
+* Haiyang
+   * Improve calculator, having function: adding caletory, date, location
+   * Create a basic recyclerview in Home fragment to display the expense
+* Payton
+   * Make profile icon round using a API on github
+   * Layout of profile section
+   * Different situation for login and logout
+   
+Week6:
+* Jie and Zhenqing: 
+   * create a pie chart, but can not connect between data from the database with pie chart API, thus just hard code a pie chart to see how api works,fix it as soon as possible.
+* Haiyang
+   * Change database to SQLite, since I having trouble with realm
+* Payton
+   * User can now login the account through facebook
+   * Profile name, icon, and image will be changed to facebook’s
+   
+Week7:
+* All member: 
+   * Discuss architecture and design pattern
+   * We are focused on database centric architecture, component-based architecture, singleton design pattern and adapter    design pattern.
+   
+Week8:
+* Jie and Zhenqing: 
+   * Working on category page so that user can add/delete their own category tag
+   * Connect category with database.
+* Haiyang: 
+   * Switch recyclerview to listview
+   * Create a class to calculate the total income and expenses. 
+* Payton
+   * Prepare to retrieving data from users’ input to generate Excel files
+   * Send excel through email or upload to Google Drive after excel generation. 
+   
+Week9:
+* All member
+   * Working on the language setting part, try to find an efficient way to change language between English and Chinese.
+* Haiyang
+   * Finish the home page, allows user to change the date to see their records
+* Payton
+   * Change the basic icon to a better UI icon in the loading page.
+   * Delete unrelated code in our programme.
+   
+Week10:
+* Zhenqing and Jie 
+   * working on password fragment and write/read user password from/to database. And have some issues when users change the password, gonna fix that soon.
+* Haiyang
+   * Implement Excel generation
+   * Improve Font so that text are more readable 
+* Payton
+   * Improve the layout of excel files
+   * Solved file IO access when generating excel files.
+   * Trying to graph in excel but failed
+
+------------------------------------------------------------------------------------------------------------
+Haiyang Ni: database design, ListView in HomePage, Excel generation,Language setting
+Zhenqing Lang: Feedback part, UI design, Pie chart generation, Language setting, Category page
+Payton Pei: Log in, Operation logical, Excel generation,Language setting, Password and loading page
+Jie Ren: Feedback part, UI design, Pie chart generation, Language setting, Category page

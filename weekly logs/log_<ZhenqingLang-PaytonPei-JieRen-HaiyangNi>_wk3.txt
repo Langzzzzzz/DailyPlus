@@ -1,3 +1,0 @@
-1. loading interface done.
-2. sliding menu still need some work on. Expect done by next week
-3. main color tone confirmeds

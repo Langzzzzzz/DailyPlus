@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loading"
+    android:orientation="vertical"
+    android:label="@string/app_name"
+    android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+    tools:context=".loadingPage">
+
+
+    <!--<com.facebook.login.widget.LoginButton-->
+        <!--android:id="@+id/login_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:gravity="center">
+
+<!--        <EditText-->
+<!--            android:id="@+id/password"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="50dp"-->
+<!--            android:gravity="center"-->
+<!--            android:hint="Input the password"-->
+<!--            android:inputType="numberPassword" />-->
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:layout_width="300dp"
+            android:id="@+id/mat"
+            android:layout_height="wrap_content"
+            app:mtf_labelColor="@color/black"
+            app:mtf_image="@drawable/password"
+
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/numberPassword"
+                android:layout_height="wrap_content"
+                android:hint="@string/passwordHint"
+                android:textColor="@color/black"
+                android:inputType="number"
+                android:textSize="15sp" />
+
+        </com.github.florent37.materialtextfield.MaterialTextField>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id = "@+id/jumpButton"
+            android:background="@drawable/ripple_button"
+            android:layout_marginHorizontal="50dp"
+            android:textColor="@color/black"
+            android:text="@string/unlock" />
+    </LinearLayout>
+        <!--app:layout_constraintTop_toTopOf="@id/login_button"/>-->
+</LinearLayout>
