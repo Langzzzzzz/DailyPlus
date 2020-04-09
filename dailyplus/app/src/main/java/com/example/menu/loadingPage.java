@@ -1,6 +1,7 @@
 package com.example.menu;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -37,15 +38,15 @@ import java.util.Scanner;
 
 import static android.widget.Toast.LENGTH_LONG;
 
-public class  loadingPage extends AppCompatActivity {
-    public static int SLASH = 3000;//waiting time
-//    private CallbackManager mCallbackManager;
+public class loadingPage extends AppCompatActivity {
+    private static final String TAG  = "loadingPage";
     private FirebaseApp mAuth = FirebaseApp.getInstance();
     FirebaseUser currentUser= FirebaseAuth.getInstance().getCurrentUser();
     private EditText passwordInput;
     MaterialTextField materialTextField;
     public static String password;
     public static DB db;
+    private Button login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,17 +55,12 @@ public class  loadingPage extends AppCompatActivity {
         setContentView(R.layout.loading);
         passwordInput = findViewById(R.id.numberPassword);
         materialTextField = findViewById(R.id.mat);
-        if (password.equals("")) {
-            passwordInput.setVisibility(View.INVISIBLE);
-            materialTextField.setVisibility(View.INVISIBLE);
+        hidePasswordInputField();//input does not show up unless user creates a password
 
-        }
-        //should fix this by first time launch !
-
-
-        Button login = findViewById(R.id.jumpButton);
+        login = findViewById(R.id.jumpButton);
         login.setOnClickListener(v->
         {
+            Log.v(TAG,"Unlock button clicked");
             if (passwordInput.getText().toString().equals(password) || password.equals("")) {
                 Intent nextScreen = new Intent(loadingPage.this, MainActivity.class);
                 nextScreen.putExtra("user", "default");
@@ -74,43 +70,29 @@ public class  loadingPage extends AppCompatActivity {
                 Toast.makeText(this, "Incorrect password", Toast.LENGTH_SHORT).show();
             }
         });
-
-//        firstLaunch();
-//        new Handler().postDelayed(() -> {
-//            Intent nextScreen = new Intent(loadingPage.this, MainActivity.class);
-//            startActivity(nextScreen);
-//            finish();
-//            //should load first pic
-//        }, SLASH);
     }
-//
-//    private void firstLaunch() {
-//        SharedPreferences sharedPreferences = getSharedPreferences("FirstRun",0);
-//        Boolean first_run = sharedPreferences.getBoolean("First",true);
-//        if (first_run){
-//            sharedPreferences.edit().putBoolean("First",false).apply();
-//            //first run => launch tutorial
-//        }
-//        //else start app as usuals
-//
-//    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-    // Pass the activity result back to the Facebook SDK
-//        mCallbackManager.onActivityResult(requestCode, resultCode, data);
+
     }
     @Override
     public void onStart() {
         super.onStart();
-
         // Check if user is signed in (non-null) and update UI accordingly.
-
         updateUI(currentUser);
     }
     public void updateUI(FirebaseUser currentUser){
-        //do something with user then
+        Log.v(TAG,"User logged in");
 //        Toast.makeText(loadingPage.this,"You just login",Toast.LENGTH_LONG).show();
+    }
+    public void hidePasswordInputField(){
+        if (password.equals("")) {
+            passwordInput.setVisibility(View.INVISIBLE);
+            materialTextField.setVisibility(View.INVISIBLE);
+
+        }
     }
 
 

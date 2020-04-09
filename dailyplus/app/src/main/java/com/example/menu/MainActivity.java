@@ -25,6 +25,7 @@ import com.facebook.login.widget.LoginButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import android.os.StrictMode;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -63,11 +64,11 @@ import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
 
-//test fetch
 
 public class MainActivity extends AppCompatActivity {
 
     private FloatingActionButton fab;
+    private static final String TAG = "MainActivity";
     private NavigationView navigationView;
     private AppBarConfiguration mAppBarConfiguration;
     public static String user;
@@ -124,9 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
         loginButton.setOnClickListener(e->
         {
-            System.out.println("Login Button Clicked");
-
-
+            Log.v(TAG, "facebook login button clicked=");
         });
 
         callbackManager = CallbackManager.Factory.create();
@@ -197,15 +196,6 @@ public class MainActivity extends AppCompatActivity {
         request.setParameters(parameters);
         request.executeAsync();
     }
-
-
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.main, menu);
-//        return true;
-//    }
 
     @Override
     public boolean onSupportNavigateUp() {
