@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/passwordHint"
                 android:textColor="@color/black"
-                android:inputType="number"
+                android:inputType="numberPassword"
                 android:textSize="15sp" />
 
         </com.github.florent37.materialtextfield.MaterialTextField>
