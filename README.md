@@ -1,18 +1,16 @@
-# 3004_2020winter 
+# Daily+ 🤔
+### A computer science collaborative assignemnt for COMP 3004 Winter 2020 at Carleton University under supervision of Prof. Olga Baysal 
+### Contributors✨:</br>
+Order does not matter🌍
+<table>
+  <tr>
+	<td align="center"><a href="https://github.com/peidong110"><img src="https://avatars3.githubusercontent.com/u/28520502?v=4" width="100pxs;" alt=""/><br /><sub>Payton Dong Pei</td>
+	<td align="center"><a href="https://github.com/Langzzzzzz"><img src="https://avatars2.githubusercontent.com/u/44860932?v=4" width="100pxs;" alt=""/><br /><sub>Zhengqing Lang</td>
+	<td align="center"><a href="https://github.com/JieRen12138"><img src="https://avatars3.githubusercontent.com/u/36045278?v=4" width="100pxs;" alt=""/><br /><sub> Jie Ren</td>	
+	<td align="center"><a href="https://github.com/HaiyangNi"><img src="https://avatars1.githubusercontent.com/u/48030696?v=4" width="100pxs;" alt=""/><br /><sub>Haiyang Harrison Ni</td>
+  </tr>
+</table>
 
-### Course: COMP 3004B</br>
-	Instructor: Prof. Olga Baysal
-	Team Name: Just Five
-### Team Member:
-      Zhenqing Lang  101087276
-      Jie      Ren 	 101087545
-      Haiyang  Ni	 101067092
-      Payton   Pei	 101065299
-
-### Meeting Information:
-	Location: HP4115
-	Period 	: Monday  3:00PM – 8:00PM
-		  Tuesday 3:00PM - 8:00PM
 
 ### Testing Machine:
 	  This application is tested based on Google Pixel 3a	
@@ -23,8 +21,6 @@
 	A: People can record their own life data anytime and anywhere, 
 	   also they can check their past records at any time.
 
-### project name:
-	A:Daliy+
 
 ### Why does this project make sense in a mobile form factor?
 	A: People use their phones every day and usually use their phones to pay, 
