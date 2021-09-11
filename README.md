@@ -5,7 +5,7 @@ Order does not matter🌍
 <table>
   <tr>
 	<td align="center"><a href="https://github.com/peidong110"><img src="https://avatars3.githubusercontent.com/u/28520502?v=4" width="100pxs;" alt=""/><br /><sub>Payton Dong Pei</td>
-	<td align="center"><a href="https://github.com/Langzzzzzz"><img src="https://avatars2.githubusercontent.com/u/44860932?v=4" width="100pxs;" alt=""/><br /><sub>Zhengqing Lang</td>
+	<td align="center"><a href="https://github.com/Langzzzzzz"><img src="https://avatars2.githubusercontent.com/u/44860932?v=4" width="100pxs;" alt=""/><br /><sub>Zhenqing Lang</td>
 	<td align="center"><a href="https://github.com/JieRen12138"><img src="https://avatars3.githubusercontent.com/u/36045278?v=4" width="100pxs;" alt=""/><br /><sub> Jie Ren</td>	
 	<td align="center"><a href="https://github.com/HaiyangNi"><img src="https://avatars1.githubusercontent.com/u/48030696?v=4" width="100pxs;" alt=""/><br /><sub>Haiyang Harrison Ni</td>
   </tr>
